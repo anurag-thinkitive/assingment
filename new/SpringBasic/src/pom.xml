@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util
+                    http://www.springframework.org/schema/util/spring-util-2.5.xsd
+           ">
+           
+                     <bean id="addr1"  class="com.training.Address">
+<constructor-arg name="city" value="sh"></constructor-arg>
+<constructor-arg name="pincode" value="789"></constructor-arg>
+</bean>
+
+    
+           
+           <bean id="emp" class="com.training.Employee">
+           <property name="empid" value="12"></property>
+           <property name="name" value="anu"></property>
+           <property name="salary" value="999"></property>
+           <property name="addr" >
+           
+           <list >
+        
+   <ref bean="addr1"/>
+ <bean class="com.training.Address">
+ <property name="city" value="ranchi"></property>
+ <property name="pincode" value="0099"></property>
+ </bean>
+   
+           </list>
+           </property>
+           
+           
+           </bean>
+           
+    
+          
+           </beans>
